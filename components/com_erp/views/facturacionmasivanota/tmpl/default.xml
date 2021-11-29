@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id -->
+<metadata>
+	<layout title="ERP - MOdificar Texto de Nota de Debito">
+		<message></message>
+	</layout>
+	<!-- Add fields to the parameters object for the layout. -->
+	<!-- <fields name="request">
+		<fieldset name="request" label="Parámetros básicos">
+			<field name="id" type="text" description="Debe indicar el ID del evento" label="ID del Evento"></field>
+		</fieldset>
+	</fields>-->
+</metadata>

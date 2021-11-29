@@ -1,0 +1,60 @@
+.skin-blue .main-header .navbar {
+    background-color: #ecf0f5 !important ;
+    border-radius: 40px 40px 0 0px !important;
+}
+.skin-blue .main-header .navbar .sidebar-toggle {
+    color: #fff !important;
+}
+.skin-blue .main-header .navbar .sidebar-toggle {
+    color: #444 !important/*  */;
+}
+.skin-blue .main-header .navbar .nav>li>a {
+    color: #444 !important;
+}
+.skin-blue .main-header .logo {
+    background-color: #1c3faa !important;
+    
+}
+.skin-blue .main-header .logo {
+    background-color: #1c3faa !important;
+    border-bottom: 0 solid transparent;
+}
+
+.sk
+.skin-blue .wrapper,
+.skin-blue .main-sidebar,
+.skin-blue .left-side {
+    background-color: #1c3faa !important;
+}
+
+.skin-blue .sidebar-menu>li.header {
+    color: #ffffff;
+    background: #0c2f97 !important;
+}
+
+.skin-blue .sidebar a {
+    color: #ffffff !important;
+}
+
+.skin-blue .main-header .logo {
+    background-color: #ffffff !important;
+    border-bottom: 0 solid transparent;
+}
+
+.skin-blue .sidebar-menu>li:hover>a,
+.skin-blue .sidebar-menu>li.active>a {
+    color: #ffffff !important;
+    background: #3d5fc5 !important;
+    border-left-color: #3d5fc5 !important;
+}
+
+.skin-blue .sidebar-menu>li>.treeview-menu {
+    margin: 0 1 px;
+    background: #1c3faa !important;
+}
+
+.subtitle {
+    color: #fff;
+    background: #3d5fc5 !important;
+    padding: 4px 4px 4px 14px;
+}

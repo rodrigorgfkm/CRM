@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 51 2010-11-22 01:33:21Z chdemko $ -->
+<metadata>
+	<layout title="COM_CGNCONTA_TITLE_CAMBIO">
+		<message>COM_CGNCONTA_DESC_CAMBIO</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="id"
+				type="list"
+				label="COM_CGNCONTA_HELLOWORLD_FIELD_GREETING_LABEL"
+				description="COM_CGNCONTA_HELLOWORLD_FIELD_GREETING_DESC"
+				default="1"
+			>
+				<option value="1">Hola</option>
+				<option value="2">Adios</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

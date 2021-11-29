@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+aside.control-sidebar-dark{
+    display: none;
+}
+.extensiones{
+	display:none
+	}
+.select2-container{
+	width: 100% !important
+	}
+.table-hover>tbody>tr:hover{
+	background: #e6e8f3 !important;
+	}
+/*para el ocultar botones debajo del calendario del jquery*/	
+.ui-datepicker-trigger, .ui-datepicker-buttonpane{
+   display: none;   
+}
+.filtros-tablas{
+    position: relative;
+    z-index: 999;
+}
+.margen-top-d{
+    margin-top: 15px;
+}
+[readonly], select[disabled]{
+    background: white !important;
+}
+#lista_cliente section>div{
+    max-height: 300px;
+}
+#lista_cliente section .box-body{
+    max-height: 230px;
+    overflow: auto;
+}
+.estados{
+    margin-left: 5px;
+}
+.resalta{
+    background-color: rgba(255, 249, 62, 0.64) !important;
+}
+.resalta2{
+    background-color: rgba(0, 55, 255, 0.27) !important;
+}
+#ui-datepicker-div, #sb-container{
+    z-index: 1050 !important;
+}
+.text-plomo{
+    color: #676767 !important;
+}
+.conboton-l{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+.conboton-r{
+    width: 50%;
+    display: inline-block;
+}
+@media only screen and (min-width: 1024px){
+     .conboton-l,.conboton-r{width: 50% !important;}
+}
+@media
+only screen and (max-width: 760px)  {
+    .conboton-l,.conboton-r{width: 100% !important;}
+    .estados{
+        margin-left: inherit;
+    }
+    .btn{
+        white-space: initial;
+    }
+    .xcel{
+        display: none;
+    }
+    .margen-top-d{
+        margin-top: 0;
+    }
+	/* Force table to not be like tables anymore */
+	table.resp, table.resp thead, table.resp tbody, table.resp th, table.resp td, table.resp tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.resp thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	table.resp tr { border: 1px solid #ccc; }
+
+	table.resp td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+}

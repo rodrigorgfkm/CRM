@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="template" client="site" method="upgrade">
+    <name>midtownarchitect</name>
+    <creationDate>September 2015</creationDate>
+    <author>Created by Cocoon</author>
+    <authorEmail>info@createdbycocoon.com</authorEmail>
+    <authorUrl>http://createdbycocoon.com</authorUrl>
+    <copyright>Copyright 2015</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+    <version>1.0</version>
+    <description>This template is a responsive and retina-ready Joomla! template with grid system layout.</description>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.tpl_midtownarchitect.ini</language>
+    </languages>
+    <positions>
+        <position>portfolio</position>
+        <position>portfoliofilter</position>
+        <position>mainmenu</position>
+        <position>404</position>
+    </positions>
+
+    <files>
+        <file>index.php</file>
+        <file>template_preview.png</file>
+        <file>template_thumbnail.png</file>
+        <file>templateDetails.xml</file>
+        <file>component.php</file>
+        <folder>css/</folder>
+        <folder>features/</folder>
+        <folder>fonts/</folder>
+        <folder>html/</folder>
+        <folder>images/</folder>
+        <folder>js/</folder>
+        <folder>layout/</folder>
+        <folder>sppagebuilder/</folder>
+    </files>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic" addfieldpath="/plugins/system/helix3/fields">
+
+                <field type="asset" />
+
+                <field name="favicon" type="media" preview="true" label="HELIX_FAVICON" description="HELIX_FAVICON_DESC" />
+
+                <field type="group" title="HELIX_LOGO" />
+
+                <!-- logo image -->
+                <field name="logo_image" class="child logotype logotype_image" type="media" preview="true" label="HELIX_LOGO_TYPE_IMAGE" description="HELIX_LOGO_TYPE_IMAGE_DESC" />
+
+                <!-- logo text -->
+                <field name="logo_text" class="child logotype logotype_text" type="text" label="HELIX_LOGO_TYPE_TEXT" description="HELIX_LOGO_TYPE_TEXT_DESC" />
+                <field name="logo_slogan" class="child logotype logotype_text" type="text" label="HELIX_LOGO_SLOGAN" description="HELIX_LOGO_SLOGAN_DESC" />
+
+                <!-- Footer -->
+                <field type="group" title="HELIX_FOOTER" />
+                <field name="enabled_copyright" type="radio" class="parent copyright" default="1" label="HELIX_COPYRIGHT" description="HELIX_COPYRIGHT_DESC">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="copyright" class="child copyright copyright_1" type="textarea" rows="6" cols="30" default="© 2015 Your Company. All Rights Reserved." label="HELIX_COMPYRIGHT_TEXT" description="HELIX_COMPYRIGHT_TEXT_DESC" filter="raw" />
+
+                <!--Social Icons-->
+                <field type="group" title="HELIX_SOCIAL_ICONS" />
+                <field name="show_social_icons" type="radio" default="1" label="HELIX_SOCIAL_ICONS" description="HELIX_SOCIAL_ICONS_DESC" class="parent social_icons">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="facebook" type="text" label="HELIX_SOCIAL_ICON_FACEBOOK" default="https://www.facebook.com/" description="HELIX_SOCIAL_ICON_FACEBOOK_DESC" class="child social_icons social_icons_1" />
+                <field name="twitter" type="text" label="HELIX_SOCIAL_ICON_TWITTER" default="https://twitter.com/" description="HELIX_SOCIAL_ICON_TWITTER_DESC" class="child social_icons social_icons_1" />
+                <field name="googleplus" type="text" label="HELIX_SOCIAL_ICON_GOOGLEPLUS" default="https://googleplus.com/" description="HELIX_SOCIAL_ICON_GOOGLEPLUS_DESC" class="child social_icons social_icons_1" />
+                <field name="pinterest" type="text" label="HELIX_SOCIAL_ICON_PINTEREST" default="https://pinterest.com/" description="HELIX_SOCIAL_ICON_PINTEREST_DESC" class="child social_icons social_icons_1" />
+
+                <!--Contact Info-->
+                <field type="group" title="HELIX_CONTACT_INFO" />
+                <field name="enable_contactinfo" type="radio" default="1" label="HELIX_ENABLE_CONTACT_INFO" description="HELIX_ENABLE_CONTACT_INFO_DESC" class="parent contactinfo">
+                    <option value="0">HELIX_NO</option>
+                    <option value="1">HELIX_YES</option>
+                </field>
+                <field name="contact_address" type="text" default="285 LEXINGTON AVE, NEW YORK, NY" label="Address" description="Add address here. Leave blank if no address is required." class="child contactinfo contactinfo_1" />
+                <field name="contact_phone" type="text" default="+228 872 4444" label="HELIX_CONTACT_PHONE" description="HELIX_CONTACT_PHONE_DESC" class="child contactinfo contactinfo_1" />
+                <field name="contact_email" type="email" default="contact@email.com" label="HELIX_CONTACT_EMAIL" description="HELIX_CONTACT_EMAIL_DESC" class="child contactinfo contactinfo_1" />
+
+            </fieldset>
+            <!--End Basic Tab-->
+
+            <!--Start Custom Code Tab-->
+            <fieldset name="custom_code">
+                <field type="group" title="HELIX_CUSTOM_CODE" />
+                <field name="before_head" type="textarea" rows="5" label="HELIX_BEFORE_HEAD" description="HELIX_BEFORE_HEAD_DESC" filter="raw" />
+                <field name="before_body" type="textarea" rows="5" label="HELIX_BEFORE_BODY" description="HELIX_BEFORE_BODY_DESC" filter="raw" />
+                <field name="custom_css" type="textarea" rows="5" label="HELIX_CUSTOM_CSS" description="HELIX_CUSTOM_CSS_DESC" filter="raw" />
+                <field name="custom_js" type="textarea" rows="5" label="HELIX_CUSTOM_JS" description="HELIX_CUSTOM_JS_DESC" filter="raw" />
+            </fieldset>
+            <!--End Custom Code Tab-->
+
+            <!--Start Homepage Tab-->
+            <fieldset name="homepage">
+                <field type="group" title="Header Image" />
+                <field name="homepage_header_image_enabled" type="radio" default="1" label="Enable Header Image?" description="Select whether to enable the Header Image.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="homepage_header_image" type="media" preview="true" label="Header Image" description="Upload an image for the homepage header. Recommended size is 610 x 410px." />
+
+                <field type="group" title="About Block" />
+                <field name="homepage_about_block_enabled" type="radio" default="1" label="Enable About Block?" description="Select whether to enable the About Block.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="homepage_about_block_title" type="text" default="Midtown Architects" label="About Block Title" description="Title for the About Block" />
+                <field name="homepage_about_block_body" type="textarea" default="We have over 15 years of experience in conception, design and development of architectural projects." rows="3" label="About Block Body" description="Body for the About Block" filter="raw" />
+                <field name="homepage_about_block_btn_text" type="text" default="Read more" label="Button Text" description="Text for the Read More button" />
+                <field name="homepage_about_block_btn_link" type="text" default="#" label="Button Link" description="Link for the Read More button" />
+
+                <field type="group" title="Offerings Block" />
+                <field name="homepage_offerings_block_enabled" type="radio" default="1" label="Enable Offerings Block?" description="Select whether to enable the Offerings Block.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="homepage_offerings_block_title" type="text" default="What We Offer" label="Offerings Block Title" description="Title for the Offerings Block" />
+                <field name="homepage_offerings_block_body" type="textarea" default="We specialize in the following areas" rows="3" label="Offerings Block Body" description="Body for the Offerings Block" filter="raw" />
+                <field name="homepage_offerings_block_btn_text" type="text" default="Read more" label="Button Text" description="Text for the Read More button" />
+                <field name="homepage_offerings_block_btn_link" type="text" default="#" label="Button Link" description="Link for the Read More button" />
+
+                <field type="group" title="Services Block" />
+                <field name="homepage_services_block_enabled" type="radio" default="1" label="Enable Services Block?" description="Select whether to enable the Services Block.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="homepage_services_block_title" type="text" default="Our Services" label="Services Block Title" description="Title for the Services Block" />
+                <field name="homepage_services_block_body" type="textarea" default="We got you covered from drafting, planing, application for construction permit, site management, to a call for tendors.If need be, we also offer building valuations." rows="3" label="Services Block Body" description="Body for the Services Block" filter="raw" />
+                <field name="homepage_services_block_btn_text" type="text" default="Read more" label="Button Text" description="Text for the Read More button" />
+                <field name="homepage_services_block_btn_link" type="text" default="#" label="Button Link" description="Link for the Read More button" />
+
+                <field type="group" title="Quote Block" />
+                <field name="homepage_quote_block_enabled" type="radio" default="1" label="Enable Quote Block?" description="Select whether to enable the Quote Block.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="homepage_quote_block_title" type="text" label="Quote Author" description="Author of the quote." />
+                <field name="homepage_quote_block_body" type="textarea" rows="3" label="Quote Block Body" description="Body for the Quote Block" filter="raw" />
+
+                <field type="group" title="Featured Image" />
+                <field name="homepage_featured_image_enabled" type="radio" default="1" label="Enable Featured Image?" description="Select whether to enable the Featured Image.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="homepage_featured_image" type="media" preview="true" label="Featured Image" description="Upload an image. Recommended size is 610 x 410px." />
+                <field name="homepage_featured_image_title" type="text" label="Title" description="Title for the image." />
+                <field name="homepage_featured_image_subtitle" type="text" label="Subtitle" description="Subtitle for the image." />
+                <field name="homepage_featured_image_icon" type="list" default="winner" label="Icon" description="Icon for the image.">
+		  <option value="adjust">Adjust</option>
+		  <option value="apple">Apple</option>
+		  <option value="balance">Balance</option>
+		  <option value="beaker">Beaker</option>
+		  <option value="beer">Beer</option>
+		  <option value="books">Books</option>
+		  <option value="box">Box</option>
+		  <option value="cake">Cake</option>
+		  <option value="calculator">Calculator</option>
+		  <option value="camera">Camera</option>
+		  <option value="cd">CD</option>
+		  <option value="champagne">Champagne</option>
+		  <option value="chart">Chart</option>
+		  <option value="chat">Chat</option>
+		  <option value="cheese">Cheese</option>
+		  <option value="commerce">Commerce</option>
+		  <option value="court">Court</option>
+		  <option value="delivery">Delivery</option>
+		  <option value="document">Document</option>
+		  <option value="dvd">DVD</option>
+		  <option value="eco">Eco</option>
+		  <option value="film">Film</option>
+		  <option value="grape">Grape</option>
+		  <option value="hot">Hot</option>
+		  <option value="house">House</option>
+		  <option value="icecream">Ice-cream</option>
+		  <option value="illustration">Illustration</option>
+		  <option value="joystick">Joystick</option>
+		  <option value="keynote">Keynote</option>
+		  <option value="like">Like</option>
+		  <option value="link">Link</option>
+		  <option value="magic">Magic</option>
+		  <option value="mail">Mail</option>
+		  <option value="map">Map</option>
+		  <option value="microphone">Microphone</option>
+		  <option value="network">Network</option>
+		  <option value="notes">Notes</option>
+		  <option value="palette">Palette</option>
+		  <option value="pig">Pig</option>
+		  <option value="plaster">Plaster</option>
+		  <option value="player">Player</option>
+		  <option value="polaroid">Polaroid</option>
+		  <option value="printer">Printer</option>
+		  <option value="pulse">Pulse</option>
+		  <option value="quote">Quote</option>
+		  <option value="radio">Radio</option>
+		  <option value="recorder">Recorder</option>
+		  <option value="ruler">Ruler</option>
+		  <option value="scissors">Scissors</option>
+		  <option value="search">Search</option>
+		  <option value="select">Select</option>
+		  <option value="serving">Serving</option>
+		  <option value="share">Share</option>
+		  <option value="shop">Shop</option>
+		  <option value="shopping">Shopping</option>
+		  <option value="smartphone">Smartphone</option>
+		  <option value="social">Social</option>
+		  <option value="sofa">Sofa</option>
+		  <option value="syringe">Syringe</option>
+		  <option value="tags">Tags</option>
+		  <option value="tape">Tape</option>
+		  <option value="target">Target</option>
+		  <option value="team">Team</option>
+		  <option value="television">Television</option>
+		  <option value="time">Time</option>
+		  <option value="vector">Vector</option>
+		  <option value="video">Video</option>
+		  <option value="walkman">Walkman</option>
+		  <option value="winner">Winner</option>
+		  <option value="works">Works</option>
+		  <option value="zoom">Zoom</option>
+                </field>
+                <field name="homepage_featured_image_link" type="text" default="#" label="URL" description="URL for the image to link to. Leave blank for none." />
+            </fieldset>
+            <!--End Homepage Tab-->
+
+            <!--Start Contact Page Tab-->
+            <fieldset name="contact">
+                <field type="group" title="Google Map" />
+                <field name="contact_map_enabled" type="radio" default="1" label="Enable Google Map?" description="Select whether to enable the Google Map.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="contact_google_map" type="text" default="New York, New York" label="Map Address" description="Enter a full address for the map location." />
+                <field name="contact_google_map_address" type="text" default="285 LEXINGTON AVE 12603 NEW YORK, NY USA" label="Full Address" description="Enter full address to display beneath map." />
+
+                <field type="group" title="Contact Information" />
+                <field name="contact_info_enabled" type="radio" default="1" label="Enable Contact Info?" description="Enable Contact Info?">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="contact_email_address" type="text" default="info@midtown.com" label="Email Address" description="Email address to display as contact information." />
+                <field name="contact_info" type="textarea" rows="3" default="Just drop us a line, if you want to work together. We'll get back to you as soon as possible." label="Contact Info" description="Paragraph of additional contact info/text." />
+
+                <field type="group" title="Social Icons" />
+                <field name="contact_icons_enabled" type="radio" default="1" label="Enable Social Icons?" description="Enable Social Icons on the Contact page?">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="contact_icons_title" type="text" label="Social Icons Title" default="We're Social!" description="Title for the Social Icons Block" />
+                <field name="contact_icons_pinterest" type="text" label="HELIX_SOCIAL_ICON_PINTEREST" default="#" description="HELIX_SOCIAL_ICON_PINTEREST_DESC" />
+                <field name="contact_icons_instagram" type="text" label="Instagram" default="#" description="Enter full URL of your Instagram profile." />
+                <field name="contact_icons_googleplus" type="text" label="HELIX_SOCIAL_ICON_GOOGLEPLUS" default="#" description="HELIX_SOCIAL_ICON_GOOGLEPLUS_DESC" />
+                <field name="contact_icons_behance" type="text" label="HELIX_SOCIAL_ICON_BEHANCE" default="#" description="HELIX_SOCIAL_ICON_BEHANCE_DESC" />
+                <field name="contact_icons_twitter" type="text" label="HELIX_SOCIAL_ICON_TWITTER" default="#" description="HELIX_SOCIAL_ICON_TWITTER_DESC" />
+                <field name="contact_icons_facebook" type="text" label="HELIX_SOCIAL_ICON_FACEBOOK" default="#" description="HELIX_SOCIAL_ICON_FACEBOOK_DESC" />
+                <field name="contact_icons_git" type="text" label="Github" default="#" description="Enter full URL of your Github profile." />
+                <field name="contact_icons_vk" type="text" label="HELIX_SOCIAL_ICON_VK" default="#" description="HELIX_SOCIAL_ICON_VK_DESC" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>
