@@ -184,28 +184,28 @@ $num = 1;
       <div class="box-header">
         <i class="fa fa-file-text-o"></i>
 		<!-- Título de la vista -->
-        <h3 class="box-title">Nuevo Prospecto</h3>
+        <h3 class="box-title"><?=JText::_('COM_CRM_ADDPROSPECT')?></h3>
       </div>
       <div class="box-body">
        <!--ESTADO DE LA EMPRESA-->        
           <form action="index.php?option=com_erp&view=crm&layout=nuevaempresa" name="form" id="form" class="form-horizontal col-xs-12" role="form" enctype="multipart/form-data" method="post">
               <div class="form-group">
-                  <label for="" class="control-label">Empresa </label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_EMPRES')?> </label>
                   <div class="input-group btn-cargas">
                     <span class="input-group-addon hidden-xs" style="width:40px"><i class="fa fa-building"></i></span>
-                    <input type="text" name="org" id="org" class="form-control validate[maxSize[<?=$lim_empresa?>]]" placeholder="Nombre de la Empresa">
-                    <button type="button" class="btn bg-purple btn-sm cargaus" onclick="popup('asociado')"><i class="fa fa-user-plus"></i> Cargar Asociado</button>
-                    <button type="button" class="btn bg-orange btn-sm cargaus" onclick="popup('cliente')"><i class="fa fa-suitcase"></i> Cargar Cliente</button>
+                    <input type="text" name="org" id="org" class="form-control validate[maxSize[<?=$lim_empresa?>]]" placeholder="<?=JText::_('COM_CRM_EMPRES')?>">
+                    <!-- <button type="button" class="btn bg-purple btn-sm cargaus" onclick="popup('asociado')"><i class="fa fa-user-plus"></i> Cargar Asociado</button>
+                    <button type="button" class="btn bg-orange btn-sm cargaus" onclick="popup('cliente')"><i class="fa fa-suitcase"></i> Cargar Cliente</button> -->
                   </div>
               </div>
               <input type="hidden" name="origen" id="origen">
               <input type="hidden" name="id_neg" id="id_neg">
               <div class="form-group oculto">
-                  <label for="" class="control-label">Segmento </label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_SEGMEN')?> </label>
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-hashtag"></i></span>
                       <select name="id_segmento" id="id_segmento" class="form-control">
-                          <option value="">Seleccionar</option>
+                          <option value=""><?=JText::_('COM_CRM_SELECCIO')?></option>
                           <? foreach (getCRMsegmentos() as $segmento){?>
                               <option value="<?=$segmento->id?>"><?=$segmento->segmento?></option>
                           <? }?>
@@ -213,17 +213,17 @@ $num = 1;
                   </div>
               </div>
               <div class="form-group oculto">
-                  <label for="" class="control-label">Teléfono de la Empresa </label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_TEMPRES')?> </label>
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                    <input type="text" name="tel_org" id="tel_org" class="form-control validate[maxSize[<?=$lim_telfe?>]]" placeholder="Teléfono de la Empresa">
+                    <input type="text" name="tel_org" id="tel_org" class="form-control validate[maxSize[<?=$lim_telfe?>]]" placeholder="<?=JText::_('COM_CRM_TEMPRES')?>">
                   </div>
               </div>
               <div class="form-group oculto">
-                  <label for="" class="control-label">Dirección</label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_DIREM')?></label>
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                    <input type="text" name="dir_org" id="dir" class="form-control validate[maxSize[<?=$lim_dir?>]]" placeholder="Dirección de la Empresa">
+                    <input type="text" name="dir_org" id="dir" class="form-control validate[maxSize[<?=$lim_dir?>]]" placeholder="<?=JText::_('COM_CRM_DIREM')?>">
                   </div>
               </div>
               <div class="oculto" id="contacto_0">
@@ -237,46 +237,46 @@ $num = 1;
                   </div>
                   <div class="form-group">
                           <div class="col-md-6">
-                              <label for="" class="control-label">Teléfono de Contacto</label>
+                              <label for="" class="control-label"><?=JText::_('COM_CRM_TCONTAC')?></label>
                               <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                                <input type="text" name="tel_c_0" id="tel_c_0" class="form-control validate[custom[phone]maxSize[<?=$lim_c_tel?>]]" placeholder="Teléfono de la persona de contacto">
+                                <input type="text" name="tel_c_0" id="tel_c_0" class="form-control validate[custom[phone]maxSize[<?=$lim_c_tel?>]]" placeholder="<?=JText::_('COM_CRM_TCONTAC')?>">
                               </div>
                           </div>
                           <div class="col-md-6">
-                              <label for="" class="control-label">Celular de Contacto <i class="fa fa-asterisk text-red"></i></label>
+                              <label for="" class="control-label"><?=JText::_('COM_CRM_CELCONTA')?> <i class="fa fa-asterisk text-red"></i></label>
                               <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
-                                <input type="text" name="cel_c_0" id="cel_c_0" class="form-control validate[required, custom[phone],maxSize[<?=$lim_c_tel?>]]" placeholder="Celular de la persona de contacto">
+                                <input type="text" name="cel_c_0" id="cel_c_0" class="form-control validate[required, custom[phone],maxSize[<?=$lim_c_tel?>]]" placeholder="<?=JText::_('COM_CRM_CELCONTA')?>">
                               </div>
                           </div>
                       <div class="col-md-6">
-                          <label for="" class="control-label">Correo-e de Contacto</label>
+                          <label for="" class="control-label"><?=JText::_('COM_CRM_EMCONTA')?></label>
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input type="email" name="email_0" id="email_0" class="form-control validate[maxSize[<?=$lim_c_correo?>]]" placeholder="Correo electrónico de la persona de contacto">
+                            <input type="email" name="email_0" id="email_0" class="form-control validate[maxSize[<?=$lim_c_correo?>]]" placeholder="<?=JText::_('COM_CRM_EMCONTA')?>">
                           </div>
                       </div>
                       <div class="col-md-6">
-                          <label for="" class="control-label">Cargo</label>
+                          <label for="" class="control-label"><?=JText::_('COM_CRM_CARCONTA')?></label>
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input type="text" name="cargo_0" id="cargo_0" class="form-control validate[maxSize[<?=$lim_c_correo?>]]" placeholder="Cargo">
+                            <input type="text" name="cargo_0" id="cargo_0" class="form-control validate[maxSize[<?=$lim_c_correo?>]]" placeholder="<?=JText::_('COM_CRM_CARCONTA')?>">
                           </div>
                       </div>
                   </div>
               </div>
               <input type="hidden" name="c_contact" id="c_contact" value="0">
               <div class="oculto">
-                  <button type="button" class="btn btn-primary pull-right" id="addcontacto"><i class="fa fa-plus"></i> Agregar Nuevo Contacto</button>
-                  <button type="button" class="btn btn-danger pull-right" id="remcontacto" style="display:none"><i class="fa fa-trash"></i> Eliminar Contacto</button>
+                  <button type="button" class="btn btn-primary pull-right" id="addcontacto"><i class="fa fa-plus"></i> <?=JText::_('COM_CRM_ANCONTACT')?></button>
+                  <button type="button" class="btn btn-danger pull-right" id="remcontacto" style="display:none"><i class="fa fa-trash"></i> <?=JText::_('COM_CRM_ENCONTACT')?></button>
               </div>
               <div class="form-group">
-                  <label for="" class="col-xs-12 row">Valor del Negocio <i class="fa fa-asterisk text-red"></i></label>
-                  <input type="number" name="valor_negocio" id="valor_negocio" class="form-control validate[required, maxSize[<?=$lim_val?>]]" placeholder="Valor del Negocio en Bolivianos">                  
+                  <label for="" class="col-xs-12 row"><?=JText::_('COM_CRM_VDELNEGOCIO')?> <i class="fa fa-asterisk text-red"></i></label>
+                  <input type="number" name="valor_negocio" id="valor_negocio" class="form-control validate[required, maxSize[<?=$lim_val?>]]" placeholder="<?=JText::_('COM_CRM_VDELNEGOCIO')?>">                  
               </div>
               <div class="form-group">
-                  <label for="" class="control-label">Etapa del Prospecto</label>                  
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_ETPROPECTO')?></label>                  
                   <div class="progreso btn-group col-xs-12">
                       <? foreach (getCRMEtapas() as $etapapro){
                             if ($num==1){
@@ -290,11 +290,11 @@ $num = 1;
                           }?>
                       <input type="hidden" id="total_etapas" value="<?=$num-1?>">
                       <input type="hidden" name="etapa" id="etapa" value="1">
-                      <div class="visible-xs estado_btn"><b>Prospecto</b></div>
+                      <div class="visible-xs estado_btn"><b><?=JText::_('COM_CRM_PROPECT')?></b></div>
                   </div>
               </div>
               <div class="form-group">
-                  <label for="" class="control-label">Temas de Interés <i class="fa fa-asterisk text-red"></i></label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_TDI')?> <i class="fa fa-asterisk text-red"></i></label>
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
                     <select name="interes[]" id="interes" class="form-control select2 validate[required]" multiple>
@@ -305,7 +305,7 @@ $num = 1;
                   </div>
               </div>
               <div class="form-group">
-                  <label for="" class="control-label">Asignado a:</label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_ASIG')?>:</label>
                   <div class="input-group">
                     <? if(!validaAcceso('CRM Administrador')){                        
                         foreach (getUsuarios() as $usuario){
@@ -325,11 +325,11 @@ $num = 1;
                   </div>
               </div>
               <div class="form-group">
-                  <label for="" class="control-label">Fecha de Cierre Prevista</label>
+                  <label for="" class="control-label"><?=JText::_('COM_CRM_FDCPREVISTO')?></label>
                   <input type="text" name="fecha" id="fecha" class="form-control datepicker" placeholder="dd/mm/aaaa">
               </div>
                <div class="col-xs-12 text-right">                    
-                    <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i> Registrar</button>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i>  <?=JText::_('COM_CRM_REGISTR')?></button>
                </div>
           </form>
       </div>

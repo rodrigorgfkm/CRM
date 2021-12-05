@@ -388,6 +388,7 @@ jQuery(document).ready(function(){
 <!-- DataTables -->
 <script src="templates/cnc/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="templates/cnc/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- <script src="https://cdn.datatables.net/plug-ins/1.11.3/i18n/en-gb.json"></script> -->
 <script>
   jQuery(function () {
 	//jQuery(".datatable").DataTable();
