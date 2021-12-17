@@ -211,7 +211,7 @@ $asoc = getCliente($reg->id_origen);
       </div>
       <div class="box-body">
        <!--ESTADO DE LA EMPRESA-->        
-          <div class="empresa">
+         <!--  <div class="empresa">
               <h2><?=$reg->empresa?>
                 <? if($reg->id_negocio!=""){?>
                <?=$reg->estado==2?"<b class='text-red hidden-xs'>(Perdido)</b>":'';?> <?=$reg->estado==1?"<b class='text-olive hidden-xs'>(Ganado)</b>":'';?>
@@ -222,7 +222,7 @@ $asoc = getCliente($reg->id_origen);
               <div class="valor_datos"><i class="fa fa-money"></i> <?=$reg->monto?> Bs. <br class="visible-xs"><span class="hidden-xs">&nbsp;&nbsp;&nbsp;&nbsp;</span><i class="fa fa-user"></i> <?=$reg->name?></div>
               <? }?>
               <input type="hidden" id="estado" value="<?=$reg->estado?>">
-          </div>
+          </div> -->
           <!--Estado Rechazado o Completado-->
           <? if($reg->id_negocio!=""){?>
           <div class="text-right col-xs-12">
@@ -301,12 +301,12 @@ $asoc = getCliente($reg->id_origen);
                             <span class="text-plomo"><i class="fa fa-phone"></i> Telf: </span><span class="label label-warning"><?=$telefonoc->valor?></span><br>
                         <? }
                     }
-                    foreach (getClienteContacto($asoc->id_info, 'c', 'c') as $celu){?>
+                    /* foreach (getClienteContacto($asoc->id_info, 'c', 'c') as $celu){?>
                             <span class="text-plomo"><i class="fa fa-mobile"></i> Cel: </span><span class="label label-success"><?=$celu->valor?></span><br>
                         <? }
                     foreach (getClienteContacto($asoc->id_info, 'e', 'c') as $mail){?>
                             <span class="text-plomo"><i class="fa fa-envelope"></i> Correo-e: </span><?=$mail->valor?><br>
-                        <? }
+                        <? } */
                     ?>
                 </li>
                 <!--TEMAS DE INTERES-->
